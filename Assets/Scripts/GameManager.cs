@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject gameManager_object = new GameObject("GameManager");
             instance = gameManager_object.AddComponent<GameManager>();
+            DontDestroyOnLoad(gameManager_object);
             instance.Initialize();
         }
     }
@@ -46,4 +47,6 @@ public class GameManager : MonoBehaviour
             behaviour.UpdateBehaviour();
 
     }
+
+
 }

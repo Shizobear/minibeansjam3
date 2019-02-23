@@ -32,12 +32,15 @@ public class Fish : GameBehaviour, iCollectorFish
     public override void UpdateBehaviour()
     {
         movement.UpdateInput();
+        UpdateWeightPenalty();
     }
 
+    private float weightPenalty = 50f;
     public void Move(Vector3 _direction)
     {
         _direction = _direction.normalized;
-        m_transform.Translate(_direction * (speed * Time.deltaTime));
+        _direction = _direction * (speed * Time.deltaTime);
+        m_transform.Translate(_direction - (_direction * (weight / weightPenalty)));
     }
 
     public void IncreaseWeight(float _amount)
