@@ -23,6 +23,8 @@ public class Piranha : GameBehaviour, iCollectorFish, iCatchable
     [SerializeField]
     private float weight = 1;
 
+    private Vector3 current_direction;
+
     private PiranhaStates current_state;
     // Use this for initialization
     void Start()
@@ -90,6 +92,7 @@ public class Piranha : GameBehaviour, iCollectorFish, iCatchable
         if (idle_waypoint == null)
             idle_waypoint = new Vector3(initial_position_in_level.x - idle_move_distance, initial_position_in_level.y, initial_position_in_level.z);
 
+        current_direction = Vector3.MoveTowards(m_transform.position, idle_waypoint, (speed / 2) * Time.deltaTime) - m_transform.position;
         m_transform.position = Vector3.MoveTowards(m_transform.position, idle_waypoint, (speed / 2) * Time.deltaTime);
 
         if (Vector3.Distance(m_transform.position, idle_waypoint) < idle_move_distance_threshold)
@@ -106,7 +109,7 @@ public class Piranha : GameBehaviour, iCollectorFish, iCatchable
     {
         if (attack_target == null || attack_target.gameObject.activeInHierarchy == false)
             current_state = PiranhaStates.idling;
-
+        current_direction = Vector3.MoveTowards(m_transform.position, attack_target.position, Time.deltaTime * speed) - m_transform.position;
         m_transform.position = Vector3.MoveTowards(m_transform.position, attack_target.position, Time.deltaTime * speed);
     }
 
@@ -117,6 +120,8 @@ public class Piranha : GameBehaviour, iCollectorFish, iCatchable
             current_state = PiranhaStates.idling;
             return;
         }
+        current_direction = Vector3.MoveTowards(m_transform.position, initial_position_in_level, (speed / 2) * Time.deltaTime) - m_transform.position;
+
         m_transform.position = Vector3.MoveTowards(m_transform.position, initial_position_in_level, (speed / 2) * Time.deltaTime);
         Scan_for_prey();
     }
@@ -181,6 +186,11 @@ public class Piranha : GameBehaviour, iCollectorFish, iCatchable
         while (Physics2D.OverlapBox(random_tile_Worldcoordinates, tile_size_vector, 0));
 
         initial_position_in_level = random_tile_Worldcoordinates;
+    }
+
+    public Vector3 GetCurrentDirection()
+    {
+        return current_direction;
     }
 
 
