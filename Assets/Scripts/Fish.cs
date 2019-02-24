@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
-public class Fish : GameBehaviour, iCollectorFish, iCatchable
+public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
 {
     private static Fish player;
     private Transform m_transform;
@@ -85,5 +85,15 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable
     public static Fish GetReference()
     {
         return player;
+    }
+
+    public void On_eaten_by_piranha(Piranha _piranha)
+    {
+        Die();
+    }
+
+    private void Die()
+    {
+
     }
 }

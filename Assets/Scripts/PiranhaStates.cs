@@ -1,0 +1,1 @@
+enum PiranhaStates { entering, chasing, idling, caught };

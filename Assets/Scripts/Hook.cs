@@ -40,7 +40,7 @@ public class Hook : GameBehaviour
         if (caught_something == true)
             PullInCatch();
 
-        if (is_being_thrown == true)
+        else if (is_being_thrown == true)
         {
             if (EndpositionReached() == false)
                 Throw_Hook();
@@ -108,6 +108,8 @@ public class Hook : GameBehaviour
     {
         return is_in_use;
     }
+
+
 
 
 }

@@ -8,6 +8,9 @@ public class PlantFood : Collectable
     private float weightBonus = 0.5f;
     public override void OnCollect(iCollectorFish _collector)
     {
+        if (_collector is Piranha)
+            return;
+
         _collector.IncreaseWeight(weightBonus);
         this.gameObject.SetActive(false);
     }
