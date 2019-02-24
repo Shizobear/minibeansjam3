@@ -18,6 +18,8 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
 
     private bool caught = false;
 
+    private Vector3 current_direction;
+
     public override void Awake()
     {
         base.Awake();
@@ -44,9 +46,13 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
         UpdateWeightPenalty();
     }
 
+
     private float weightPenalty = 50f;
     public void Move(Vector3 _direction)
     {
+        if (_direction != Vector3.zero)
+            current_direction = _direction;
+
         _direction = _direction.normalized;
         _direction = _direction * (speed * Time.deltaTime);
         m_transform.Translate(_direction - (_direction * (weight / weightPenalty)));
@@ -106,5 +112,10 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
             UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(2, UnityEngine.SceneManagement.LoadSceneMode.Additive);
         }
 
+    }
+
+    public Vector3 GetCurrentDirection()
+    {
+        return current_direction;
     }
 }
