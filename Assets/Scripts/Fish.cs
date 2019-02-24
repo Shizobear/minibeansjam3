@@ -108,7 +108,7 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
     private void Die()
     {
         sound_manager.PlayOneShot(death_sound);
-        Debug.Log("YEAAAA!");
+        Debug.Log("YEAAA!");
         player.gameObject.SetActive(false);
         UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(3, UnityEngine.SceneManagement.LoadSceneMode.Additive);
     }
