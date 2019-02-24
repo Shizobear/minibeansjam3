@@ -28,8 +28,4 @@ public class EndscreenText : MonoBehaviour {
 		valueText.SetText(value.ToString() + " €");
 
 	}
-
-	public void ReturnToMenu() {
-		SceneManager.LoadScene(0);
-	}
 }

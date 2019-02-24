@@ -189,7 +189,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1044763798}
+      - m_Target: {fileID: 1044763799}
         m_MethodName: ReturnToMenu
         m_Mode: 1
         m_Arguments:
@@ -998,7 +998,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1044763797}
   - component: {fileID: 1044763799}
-  - component: {fileID: 1044763798}
   m_Layer: 0
   m_Name: EndScreenMenu
   m_TagString: Untagged
@@ -1022,19 +1021,6 @@ Transform:
   m_Father: {fileID: 277171126}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1044763798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1044763796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14612ec18f5b0a4e941fb1e874e70b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valueText: {fileID: 0}
-  weightText: {fileID: 0}
 --- !u!114 &1044763799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1364,8 +1350,6 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'YOU DIED CAUSE YOU GOT EATEN!
 
-    NEXT TIME GET HOOKED BEFORE THEY KILL YOU!!!
-
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1411,7 +1395,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 58
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1434,12 +1418,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2109309964}
-    characterCount: 75
+    characterCount: 30
     spriteCount: 0
-    spaceCount: 14
-    wordCount: 14
+    spaceCount: 6
+    wordCount: 6
     linkCount: 0
-    lineCount: 5
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0

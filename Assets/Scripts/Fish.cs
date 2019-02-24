@@ -101,7 +101,8 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
 
     private void Die()
     {
-
+        Debug.Log("YEAAAA!");
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(3, UnityEngine.SceneManagement.LoadSceneMode.Additive);
     }
 
     private void OnBecameInvisible()
