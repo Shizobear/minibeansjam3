@@ -105,8 +105,5 @@ public class HookSpawner : GameBehaviour
 
 
         time_last_hook_spawned = Time.time;
-
-
-
     }
 }
