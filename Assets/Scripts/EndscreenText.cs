@@ -13,16 +13,12 @@ public class EndscreenText : MonoBehaviour {
 	[SerializeField]
 	private TextMeshProUGUI weightText;
 	private float weight, value;
-
-	void Awake () {
-		player = Fish.GetReference();
-	}
-
 	void Start()
 	{
+		player = Fish.GetReference();
 		weight = player.GetWeight() * 1000f;
-		value = weight / 3 * 8 - 5;
-		value = Mathf.Round(value * 100f) * 100f;
+		value = (weight / 1000f * 12 - 3) / 2;
+		value = Mathf.Round(value * 100f) / 100f;
 	}
 	
 	// Update is called once per frame
