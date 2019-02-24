@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EndscreenText : MonoBehaviour {
 
@@ -30,5 +31,9 @@ public class EndscreenText : MonoBehaviour {
 		weightText.SetText(weight.ToString() + " g");
 		valueText.SetText(value.ToString() + " €");
 
+	}
+
+	public void ReturnToMenu() {
+		SceneManager.LoadScene(0);
 	}
 }
