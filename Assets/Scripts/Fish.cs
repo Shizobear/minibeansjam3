@@ -54,6 +54,7 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
 
     public void IncreaseWeight(float _amount)
     {
+        Debug.Log(_amount);
         weight += _amount;
     }
 
