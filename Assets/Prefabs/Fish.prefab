@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   weight: 0.5
+  nomnom_sound: {fileID: 8300000, guid: 4566e80c318a0044c9ce347927b53b47, type: 3}
+  death_sound: {fileID: 8300000, guid: c7ce2004bd1ed434eb35ea0f0ee9b712, type: 3}
 --- !u!212 &212999928540977520
 SpriteRenderer:
   m_ObjectHideFlags: 1

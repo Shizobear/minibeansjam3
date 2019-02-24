@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile_placeholder: {fileID: 1601888162846252}
+  reel_sound: {fileID: 8300000, guid: 7456b49fa9e38234cb2efed9a0eb9e56, type: 3}
 --- !u!212 &212354557090665848
 SpriteRenderer:
   m_ObjectHideFlags: 1

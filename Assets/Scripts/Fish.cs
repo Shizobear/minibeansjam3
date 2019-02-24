@@ -20,6 +20,10 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
 
     private Vector3 current_direction;
     private SoundManager sound_manager;
+    [SerializeField]
+    private AudioClip nomnom_sound;
+    [SerializeField]
+    private AudioClip death_sound;
 
     public override void Awake()
     {
@@ -62,7 +66,7 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
 
     public void IncreaseWeight(float _amount)
     {
-        Debug.Log(_amount);
+        sound_manager.PlayOneShot(nomnom_sound);
         weight += _amount;
     }
 
@@ -103,7 +107,7 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
 
     private void Die()
     {
-        Debug.Log("YEAAAA!");
+        sound_manager.PlayOneShot(death_sound);
         UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(3, UnityEngine.SceneManagement.LoadSceneMode.Additive);
     }
 

@@ -13,6 +13,10 @@ public class Hook : GameBehaviour
     private bool caught_something = false;
     private Vector3 start_position;
     private bool is_in_use = false;
+    private SoundManager sound_manager;
+    [SerializeField]
+    private AudioClip reel_sound;
+
     private float speed = 6f;    // Use this for initialization
     void Start()
     {
@@ -32,6 +36,7 @@ public class Hook : GameBehaviour
         }
 
         this.GetComponent<BoxCollider2D>().isTrigger = true;
+        sound_manager = SoundManager.GetInstance();
 
     }
 
@@ -51,6 +56,7 @@ public class Hook : GameBehaviour
 
     private void PullInCatch()
     {
+
         m_transform.position = Vector3.MoveTowards(m_transform.position, start_position, Time.deltaTime * speed);
         if (Vector3.Distance(m_transform.position, start_position) < endPosition_reached_threshold)
         {
@@ -70,6 +76,7 @@ public class Hook : GameBehaviour
         if (caught != null)
         {
             caught.OnCatch(m_transform);
+            // sound_manager.PlayOneShot(reel_sound);
             caught_something = true;
         }
 
