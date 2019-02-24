@@ -32,7 +32,12 @@ public class Piranha : GameBehaviour, iCollectorFish, iCatchable
 
         amount_of_tiles_x = (GameMetaData.ResolutionX / GameMetaData.PixelsPerUnit) / 2;
         amount_of_tiles_y = (GameMetaData.ResolutionY / GameMetaData.PixelsPerUnit) / 2;
-        grid_layout = this.transform.GetComponentInParent<GridLayout>();
+        grid_layout = GridManager.GetGridReference();
+        if (grid_layout == null)
+        {
+            Debug.LogWarning("there has to be a grid with gridmanager on it in the scene");
+            this.enabled = false;
+        }
         tile_size_vector = new Vector2(1, 1);
         GenerateInitialPosition();
         current_state = PiranhaStates.entering;
@@ -107,6 +112,11 @@ public class Piranha : GameBehaviour, iCollectorFish, iCatchable
 
     private void EnteringBehaviour()
     {
+        if (Vector3.Distance(m_transform.position, initial_position_in_level) < idle_move_distance_threshold)
+        {
+            current_state = PiranhaStates.idling;
+            return;
+        }
         m_transform.position = Vector3.MoveTowards(m_transform.position, initial_position_in_level, (speed / 2) * Time.deltaTime);
         Scan_for_prey();
     }
