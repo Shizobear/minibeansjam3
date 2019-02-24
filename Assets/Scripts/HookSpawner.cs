@@ -19,7 +19,7 @@ public class HookSpawner : GameBehaviour
     private Vector3Int random_tile_coordinates;
     private int spawn_offset = 1;
     private Vector3 random_tile_Worldcoordinates;
-
+    private Transform hook_pool_parent;
 
 
 
@@ -34,6 +34,7 @@ public class HookSpawner : GameBehaviour
         m_transform = this.transform;
         tile_size_vector = new Vector2(1, 1);
         time_last_hook_spawned = Time.time + GameMetaData.Hook_cooldown;
+        hook_pool_parent = new GameObject("Hook Pool").transform;
 
         if (grid_layout == null)
             this.enabled = false;
@@ -51,6 +52,7 @@ public class HookSpawner : GameBehaviour
         {
             hook_object_cache = Instantiate(hook_gameObject, new Vector3(i, m_transform.position.y, 0), Quaternion.identity);
             hook_pool.Add(hook_object_cache.GetComponent<Hook>());
+            hook_object_cache.transform.SetParent(hook_pool_parent);
         }
 
     }
