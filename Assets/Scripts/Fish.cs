@@ -96,4 +96,14 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
     {
 
     }
+
+    private void OnBecameInvisible()
+    {
+        if (IsCaught() == true)
+        {
+            Debug.Log("rip in peace");
+            UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(2, UnityEngine.SceneManagement.LoadSceneMode.Additive);
+        }
+
+    }
 }

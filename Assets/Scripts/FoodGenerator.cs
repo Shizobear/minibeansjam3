@@ -70,7 +70,7 @@ public class FoodGenerator : GameBehaviour
             random_tile_coordinates.y = Random.Range(-amount_of_tiles_y + spawn_offset, amount_of_tiles_y - spawn_offset);
             random_tile_coordinates.z = 0;
         }
-        while (Too_close_to_other_food(random_tile_coordinates) || Vector3Int.Distance(random_tile_coordinates, last_spawned_coordinate) < minimum_distance_between_food * 1.5f);
+        while (Too_close_to_other_food(random_tile_coordinates) || Vector3Int.Distance(random_tile_coordinates, last_spawned_coordinate) < minimum_distance_between_food * 1.5f && Physics2D.OverlapBox(random_tile_Worldcoordinates, tile_size_vector, 0));
 
 
 
@@ -79,15 +79,8 @@ public class FoodGenerator : GameBehaviour
 
         random_tile_Worldcoordinates = grid_layout.CellToWorld(random_tile_coordinates);
 
-        if (Physics2D.OverlapBox(random_tile_Worldcoordinates, tile_size_vector, 0))
-        {
-            Debug.Log("Something is in the way");
-            return;
-        }
 
-
-
-        if (Random.Range(0, 100) >= 50)
+        if (Random.Range(0, 100) <= 25)
             spawned_food.Add(Instantiate(meatFood, random_tile_Worldcoordinates, Quaternion.identity));
         else
             spawned_food.Add(Instantiate(plantFood, random_tile_Worldcoordinates, Quaternion.identity));
