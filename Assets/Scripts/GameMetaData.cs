@@ -10,7 +10,9 @@ public static class GameMetaData
 
     private static int max_amount_of_hooks = 4;
 
-    private static float hook_cooldown = 10f;
+    private static float hook_cooldown = 6f;
+    private static int max_amount_of_piranhas = 42;
+    private static float piranha_cooldown = 10f;
 
     public static int ResolutionX
     {
@@ -54,6 +56,24 @@ public static class GameMetaData
         get
         {
             return hook_cooldown;
+        }
+
+    }
+
+    public static int Max_amount_of_piranhas
+    {
+        get
+        {
+            return max_amount_of_piranhas;
+        }
+
+    }
+
+    public static float Piranha_cooldown
+    {
+        get
+        {
+            return piranha_cooldown;
         }
 
     }

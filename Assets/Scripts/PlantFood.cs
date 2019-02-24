@@ -6,6 +6,7 @@ public class PlantFood : Collectable
 {
     [SerializeField]
     private float weightBonus = 0.5f;
+    private float spawn_interval = 15f;
     public override void OnCollect(iCollectorFish _collector)
     {
         if (_collector is Piranha)
