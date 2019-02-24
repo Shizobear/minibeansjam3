@@ -19,6 +19,7 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
     private bool caught = false;
 
     private Vector3 current_direction;
+    private SoundManager sound_manager;
 
     public override void Awake()
     {
@@ -32,6 +33,7 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
         m_transform = this.gameObject.transform;
         movement = new FishMovement(this);
         m_rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
+        sound_manager = SoundManager.GetInstance();
 
     }
 
