@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50262480301441336}
   - component: {fileID: 61464939550284272}
   - component: {fileID: 61872658182407066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,5 +168,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 365536fd154439f459b15d5baef9b316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   weight: 0.5
