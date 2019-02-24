@@ -10,6 +10,8 @@ public static class GameMetaData
 
     private static int max_amount_of_hooks = 4;
 
+    private static float hook_cooldown = 1f;
+
     public static int ResolutionX
     {
         get
@@ -43,6 +45,15 @@ public static class GameMetaData
         get
         {
             return max_amount_of_hooks;
+        }
+
+    }
+
+    public static float Hook_cooldown
+    {
+        get
+        {
+            return hook_cooldown;
         }
 
     }
