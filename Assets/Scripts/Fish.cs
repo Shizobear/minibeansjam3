@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Fish : GameBehaviour, iCollectorFish, iCatchable
 {
+    private static Fish player;
     private Transform m_transform;
     private Rigidbody2D m_rigidbody;
     private FishMovement movement;
@@ -24,7 +25,7 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable
         m_transform = this.gameObject.transform;
         movement = new FishMovement(this);
         m_rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
-
+        player = this;
     }
 
     public float GetSpeed()
@@ -67,5 +68,10 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable
     public bool IsCaught()
     {
         return caught;
+    }
+
+    public static Fish GetReference()
+    {
+        return player;
     }
 }
