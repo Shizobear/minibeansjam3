@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void CreateGameManager()
     {
+        Screen.fullScreen = false;
         if (instance == null)
         {
             GameObject gameManager_object = new GameObject("GameManager");
