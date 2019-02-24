@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 61464939550284272}
   - component: {fileID: 61872658182407066}
   - component: {fileID: 212999928540977520}
+  - component: {fileID: 95335923793381088}
+  - component: {fileID: 114832507673304186}
   m_Layer: 8
   m_Name: Fish
   m_TagString: Untagged
@@ -114,6 +116,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95335923793381088
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658393443784716}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80305967f732f164b82ab43f4be4c579, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114179719771700486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +149,17 @@ MonoBehaviour:
   weight: 0.5
   nomnom_sound: {fileID: 8300000, guid: 4566e80c318a0044c9ce347927b53b47, type: 3}
   death_sound: {fileID: 8300000, guid: c7ce2004bd1ed434eb35ea0f0ee9b712, type: 3}
+--- !u!114 &114832507673304186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658393443784716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7a8493754718941a0ce44e92145fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212999928540977520
 SpriteRenderer:
   m_ObjectHideFlags: 1
