@@ -8,6 +8,8 @@ public static class GameMetaData
     private static int resolutionY = 448;
     private static int pixelsPerUnit = 16;
 
+    private static int max_amount_of_hooks = 4;
+
     public static int ResolutionX
     {
         get
@@ -32,6 +34,15 @@ public static class GameMetaData
         get
         {
             return pixelsPerUnit;
+        }
+
+    }
+
+    public static int Max_amount_of_hooks
+    {
+        get
+        {
+            return max_amount_of_hooks;
         }
 
     }

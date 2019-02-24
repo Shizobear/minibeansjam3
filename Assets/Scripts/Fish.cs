@@ -18,6 +18,11 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable
 
     private bool caught = false;
 
+    public override void Awake()
+    {
+        base.Awake();
+        player = this;
+    }
 
     // Use this for initialization
     void Start()
@@ -25,7 +30,7 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable
         m_transform = this.gameObject.transform;
         movement = new FishMovement(this);
         m_rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
-        player = this;
+
     }
 
     public float GetSpeed()
@@ -50,6 +55,11 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable
     public void IncreaseWeight(float _amount)
     {
         weight += _amount;
+    }
+
+    public float GetWeight()
+    {
+        return weight;
     }
 
     private void UpdateWeightPenalty()
