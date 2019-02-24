@@ -70,7 +70,9 @@ public class Fish : GameBehaviour, iCollectorFish, iCatchable
     public void OnCatch(Transform _hook)
     {
         caught = true;
-        this.GetComponent<BoxCollider2D>().enabled = false;
+        BoxCollider2D[] _hitboxes = this.GetComponents<BoxCollider2D>();
+        for (int i = 0; i < _hitboxes.Length; i++)
+            _hitboxes[i].enabled = false;
         m_transform.SetParent(_hook);
 
     }
