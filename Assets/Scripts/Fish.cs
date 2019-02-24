@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Fish : GameBehaviour, iCollectorFish
+[RequireComponent(typeof(BoxCollider2D))]
+public class Fish : GameBehaviour, iCollectorFish, iCatchable
 {
     private Transform m_transform;
     private Rigidbody2D m_rigidbody;
@@ -13,6 +14,8 @@ public class Fish : GameBehaviour, iCollectorFish
 
     [SerializeField]
     private float weight = 0.5f;
+
+    private bool caught = false;
 
 
     // Use this for initialization
@@ -51,5 +54,18 @@ public class Fish : GameBehaviour, iCollectorFish
     private void UpdateWeightPenalty()
     {
         //TODO
+    }
+
+    public void OnCatch(Transform _hook)
+    {
+        caught = true;
+        this.GetComponent<BoxCollider2D>().enabled = false;
+        m_transform.SetParent(_hook);
+
+    }
+
+    public bool IsCaught()
+    {
+        return caught;
     }
 }

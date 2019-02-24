@@ -16,6 +16,9 @@ public class FishMovement
     private float y = 0;
     public void UpdateInput()
     {
+        if (fish.IsCaught() == true)
+            return;
+
         inputVector = Vector3.zero;
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
