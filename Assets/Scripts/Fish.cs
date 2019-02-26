@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
-public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey
+public class Fish : GameBehaviour, iCollectorFish, iCatchable, iPiranhaPrey, iAnimatibleDirection
 {
     private static Fish player;
     private Transform m_transform;

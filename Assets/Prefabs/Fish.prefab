@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61872658182407066}
   - component: {fileID: 212999928540977520}
   - component: {fileID: 95335923793381088}
-  - component: {fileID: 114832507673304186}
+  - component: {fileID: 114243737245117542}
   m_Layer: 8
   m_Name: Fish
   m_TagString: Untagged
@@ -78,7 +78,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5376191}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -89,7 +89,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.63550663}
   m_EdgeRadius: 0
 --- !u!61 &61872658182407066
 BoxCollider2D:
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5789361}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -114,7 +114,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.6465435}
   m_EdgeRadius: 0
 --- !u!95 &95335923793381088
 Animator:
@@ -149,7 +149,7 @@ MonoBehaviour:
   weight: 0.5
   nomnom_sound: {fileID: 8300000, guid: 4566e80c318a0044c9ce347927b53b47, type: 3}
   death_sound: {fileID: 8300000, guid: c7ce2004bd1ed434eb35ea0f0ee9b712, type: 3}
---- !u!114 &114832507673304186
+--- !u!114 &114243737245117542
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1658393443784716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7a8493754718941a0ce44e92145fec, type: 3}
+  m_Script: {fileID: 11500000, guid: d354977089ca8c142b717fac5fa319f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212999928540977520

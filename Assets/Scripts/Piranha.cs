@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class Piranha : GameBehaviour, iCollectorFish, iCatchable
+public class Piranha : GameBehaviour, iCollectorFish, iCatchable, iAnimatibleDirection
 {
 
     private Transform m_transform;

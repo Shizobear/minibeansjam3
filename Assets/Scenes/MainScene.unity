@@ -249,10 +249,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 1646234337990682, guid: a1050c516f657204698eb2ffca17d1f7, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1050c516f657204698eb2ffca17d1f7, type: 2}
   m_IsPrefabAsset: 0
@@ -3202,31 +3198,6 @@ Prefab:
     - target: {fileID: 4752305438745006, guid: 3f23b0116e8a51d4e8d20fe3eb3517cd, type: 2}
       propertyPath: m_RootOrder
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114179719771700486, guid: 3f23b0116e8a51d4e8d20fe3eb3517cd,
-        type: 2}
-      propertyPath: nomnom_sound
-      value: 
-      objectReference: {fileID: 8300000, guid: 4566e80c318a0044c9ce347927b53b47, type: 3}
-    - target: {fileID: 61464939550284272, guid: 3f23b0116e8a51d4e8d20fe3eb3517cd,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.5376191
-      objectReference: {fileID: 0}
-    - target: {fileID: 61464939550284272, guid: 3f23b0116e8a51d4e8d20fe3eb3517cd,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.63550663
-      objectReference: {fileID: 0}
-    - target: {fileID: 61872658182407066, guid: 3f23b0116e8a51d4e8d20fe3eb3517cd,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.5789361
-      objectReference: {fileID: 0}
-    - target: {fileID: 61872658182407066, guid: 3f23b0116e8a51d4e8d20fe3eb3517cd,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 0.6465435
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f23b0116e8a51d4e8d20fe3eb3517cd, type: 2}

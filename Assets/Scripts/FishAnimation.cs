@@ -6,12 +6,12 @@ public class FishAnimation : MonoBehaviour {
 
 	// Use this for initialization
 	private Animator anim;
-	private Fish player;
+	private iAnimatibleDirection player;
 	private Vector3 direction;
 	void Start () {
 		anim = this.GetComponent<Animator>();
-		player = Fish.GetReference();
-	}
+        player = this.GetComponent<iAnimatibleDirection>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
